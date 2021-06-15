@@ -36,7 +36,7 @@ RUN set -o errexit -o nounset \
 ENV JAVA_HOME="/usr/local/jre"
 ENV PATH=$PATH:$JAVA_HOME/bin
 
-COPY docker-entrypoint.sh $BASE_DIR/bin
+ADD https://github.com/tronprotocol/java-tron/blob/develop/docker-entrypoint.sh $BASE_DIR/bin
 
 WORKDIR $BASE_DIR
 
